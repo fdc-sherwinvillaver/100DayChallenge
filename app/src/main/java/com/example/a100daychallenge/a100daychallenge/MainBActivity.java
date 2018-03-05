@@ -9,23 +9,24 @@ import android.widget.TextView;
 
 import java.util.Random;
 
-public class MainActivity extends AppCompatActivity {
+public class MainBActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main_b);
 
         Button btn = (Button)findViewById(R.id.button);
 
         btn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, MainBActivity.class);
+                Intent intent = new Intent(MainBActivity.this, MainActivity.class);
                 startActivity(intent);
-                overridePendingTransition(R.anim.right_in, R.anim.left_out);
+                overridePendingTransition(R.anim.left_in, R.anim.right_out);
             }
         });
+
 
         Random r = new Random();
 
